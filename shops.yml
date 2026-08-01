@@ -1,0 +1,661 @@
+# ─────────────────────────────────────────────────────────────────
+#  TkShop — danh muc & vat pham
+#
+#  Moi item gom:
+#    title                     : tieu de man hinh xac nhan mua
+#    material                  : Bukkit material
+#    custom-displayname-enabled: co dung ten rieng khong
+#    custom-displayname        : ten rieng (neu bat o tren)
+#    execute-command           : true = chay lenh thay vi dua item thang vao tui
+#    command                   : danh sach lenh console (ho tro {player}, {amount})
+#    enchantments              : danh sach "TEN_PHU_PHEP:CAP_DO" (vd: DURABILITY:3)
+#    amount                    : so luong item nhan duoc / lenh chay ung voi 1 don vi gia
+#    max-amount                : so luong toi da co the mua trong 1 lan
+#    price                     : gia cho "amount" don vi
+#    slot                      : vi tri trong GUI danh muc
+#    economy                   : "vault" (tien $) hoac "tkshards" (tien TKShards)
+# ─────────────────────────────────────────────────────────────────
+
+items-lore:
+  - '&fGia mua: &a${price}'
+
+shards-items-lore:
+  - '&fGia mua: &#A303F9{price} &l{currency}'
+
+back-item:
+  material: RED_STAINED_GLASS_PANE
+  displayName: '&4QUAY LAI'
+  lore:
+    - '&fNhan de quay lai'
+  slot: 18
+
+confirm-item:
+  material: LIME_STAINED_GLASS_PANE
+  displayName: '&aXAC NHAN'
+  lore:
+    - '&fNhan de xac nhan mua'
+  slot: 22
+
+cancel-item:
+  material: RED_STAINED_GLASS_PANE
+  displayName: '&#ff0000HUY'
+  lore:
+    - '&fNhan de huy'
+  slot: 20
+
+remove1-item:
+  material: RED_STAINED_GLASS_PANE
+  displayName: '&c-1'
+  lore: ['&7Nhan de bot 1']
+  slot: 11
+
+remove10-item:
+  material: RED_STAINED_GLASS_PANE
+  displayName: '&c-10'
+  lore: ['&7Nhan de bot 10']
+  slot: 10
+
+remove64-item:
+  material: RED_STAINED_GLASS_PANE
+  displayName: '&c-64'
+  lore: ['&7Nhan de bot 64']
+  slot: 9
+
+add1-item:
+  material: LIME_STAINED_GLASS_PANE
+  displayName: '&a+1'
+  lore: ['&7Nhan de them 1']
+  slot: 15
+
+add10-item:
+  material: LIME_STAINED_GLASS_PANE
+  displayName: '&a+10'
+  lore: ['&7Nhan de them 10']
+  slot: 16
+
+add64-item:
+  material: LIME_STAINED_GLASS_PANE
+  displayName: '&a+64'
+  lore: ['&7Nhan de them 64']
+  slot: 17
+
+categories:
+  end:
+    title: SHOP - END
+    material: END_STONE
+    displayName: '&#00f986END'
+    lore: ['&fNhan de xem shop End']
+    slot: 10
+    ender-chest:
+      title: Mua Ruong Ender
+      material: ENDER_CHEST
+      amount: 1
+      max-amount: 64
+      price: 2500.0
+      slot: 9
+      economy: "vault"
+    ender-pearl:
+      title: Mua Ngoc Ender
+      material: ENDER_PEARL
+      amount: 1
+      max-amount: 16
+      price: 75.0
+      slot: 10
+      economy: "vault"
+    end-stone:
+      title: Mua Da End
+      material: END_STONE
+      amount: 16
+      max-amount: 64
+      price: 128.0
+      slot: 11
+      economy: "vault"
+    dragon-breath:
+      title: Mua Hoi Tho Rong
+      material: DRAGON_BREATH
+      amount: 1
+      max-amount: 64
+      price: 1000.0
+      slot: 12
+      economy: "vault"
+    end-rod:
+      title: Mua Gay Anh Sang End
+      material: END_ROD
+      amount: 1
+      max-amount: 64
+      price: 100.0
+      slot: 13
+      economy: "vault"
+    chorus-fruit:
+      title: Mua Trai Chorus
+      material: CHORUS_FRUIT
+      amount: 1
+      max-amount: 64
+      price: 24.0
+      slot: 14
+      economy: "vault"
+    popped-chorus:
+      title: Mua Trai Chorus Nuong
+      material: POPPED_CHORUS_FRUIT
+      amount: 1
+      max-amount: 64
+      price: 24.0
+      slot: 15
+      economy: "vault"
+    shulker-shell:
+      title: Mua Vo Shulker
+      material: SHULKER_SHELL
+      amount: 1
+      max-amount: 64
+      price: 350.0
+      slot: 16
+      economy: "vault"
+    shulker-box:
+      title: Mua Hop Shulker
+      material: SHULKER_BOX
+      amount: 1
+      max-amount: 1
+      price: 800.0
+      slot: 17
+      economy: "vault"
+
+  nether:
+    title: SHOP - NETHER
+    material: NETHERRACK
+    displayName: '&#00f986NETHER'
+    lore: ['&fNhan de xem shop Nether']
+    slot: 11
+    blaze-rod:
+      title: Mua Gay Lua
+      material: BLAZE_ROD
+      amount: 1
+      max-amount: 64
+      price: 150.0
+      slot: 9
+      economy: "vault"
+    nether-wart:
+      title: Mua Mun Coc Nether
+      material: NETHER_WART
+      amount: 1
+      max-amount: 64
+      price: 96.0
+      slot: 10
+      economy: "vault"
+    glowstone-dust:
+      title: Mua Bui Da Phat Sang
+      material: GLOWSTONE_DUST
+      amount: 1
+      max-amount: 64
+      price: 15.0
+      slot: 11
+      economy: "vault"
+    magma-cream:
+      title: Mua Kem Magma
+      material: MAGMA_CREAM
+      amount: 1
+      max-amount: 64
+      price: 96.0
+      slot: 12
+      economy: "vault"
+    ghast-tear:
+      title: Mua Nuoc Mat Ghast
+      material: GHAST_TEAR
+      amount: 1
+      max-amount: 64
+      price: 350.0
+      slot: 13
+      economy: "vault"
+    quartz:
+      title: Mua Thach Anh Nether
+      material: QUARTZ
+      amount: 1
+      max-amount: 64
+      price: 30.0
+      slot: 14
+      economy: "vault"
+    soul-sand:
+      title: Mua Cat Linh Hon
+      material: SOUL_SAND
+      amount: 1
+      max-amount: 64
+      price: 50.0
+      slot: 15
+      economy: "vault"
+    magma-block:
+      title: Mua Khoi Magma
+      material: MAGMA_BLOCK
+      amount: 1
+      max-amount: 64
+      price: 35.0
+      slot: 16
+      economy: "vault"
+    crying-obsidian:
+      title: Mua Obsidian Khoc
+      material: CRYING_OBSIDIAN
+      amount: 1
+      max-amount: 64
+      price: 150.0
+      slot: 17
+      economy: "vault"
+
+  gear:
+    title: SHOP - TRANG BI
+    material: TOTEM_OF_UNDYING
+    displayName: '&#00f986TRANG BI'
+    lore: ['&fNhan de xem shop trang bi']
+    slot: 12
+    obsidian:
+      title: Mua Obsidian
+      material: OBSIDIAN
+      amount: 1
+      max-amount: 64
+      price: 100.0
+      slot: 9
+      economy: "vault"
+    end-crystal:
+      title: Mua Pha Le End
+      material: END_CRYSTAL
+      custom-displayname-enabled: true
+      custom-displayname: '&eEnd Crystal'
+      amount: 1
+      max-amount: 64
+      price: 200.0
+      slot: 10
+      economy: "vault"
+    respawn-anchor:
+      title: Mua Mo Neo Hoi Sinh
+      material: RESPAWN_ANCHOR
+      amount: 1
+      max-amount: 64
+      price: 1000.0
+      slot: 11
+      economy: "vault"
+    glowstone:
+      title: Mua Da Phat Sang
+      material: GLOWSTONE
+      amount: 1
+      max-amount: 64
+      price: 100.0
+      slot: 12
+      economy: "vault"
+    totem-of-undying:
+      title: Mua Vat To Bat Tu
+      material: TOTEM_OF_UNDYING
+      amount: 1
+      max-amount: 1
+      price: 1500.0
+      slot: 13
+      economy: "vault"
+    ender-pearl:
+      title: Mua Ngoc Ender
+      material: ENDER_PEARL
+      amount: 1
+      max-amount: 16
+      price: 75.0
+      slot: 14
+      economy: "vault"
+    golden-apple:
+      title: Mua Tao Vang
+      material: GOLDEN_APPLE
+      amount: 1
+      max-amount: 64
+      price: 250.0
+      slot: 15
+      economy: "vault"
+    experience-bottle:
+      title: Mua Binh Kinh Nghiem
+      material: EXPERIENCE_BOTTLE
+      amount: 1
+      max-amount: 64
+      price: 100.0
+      slot: 16
+      economy: "vault"
+    arrow:
+      title: Mua Mui Ten
+      material: ARROW
+      amount: 1
+      max-amount: 64
+      price: 250.0
+      slot: 17
+      economy: "vault"
+
+  food:
+    title: SHOP - THUC PHAM
+    material: COOKED_BEEF
+    displayName: '&#00f986THUC PHAM'
+    lore: ['&fNhan de xem shop thuc pham']
+    slot: 13
+    potato:
+      title: Mua Khoai Tay
+      material: POTATO
+      amount: 1
+      max-amount: 64
+      price: 96.0
+      slot: 9
+      economy: "vault"
+    sweet-berries:
+      title: Mua Qua Mong Ngot
+      material: SWEET_BERRIES
+      amount: 1
+      max-amount: 64
+      price: 50.0
+      slot: 10
+      economy: "vault"
+    melon-slices:
+      title: Mua Lat Dua Hau
+      material: MELON_SLICE
+      amount: 1
+      max-amount: 64
+      price: 18.0
+      slot: 11
+      economy: "vault"
+    carrot:
+      title: Mua Ca Rot
+      material: CARROT
+      amount: 1
+      max-amount: 64
+      price: 96.0
+      slot: 12
+      economy: "vault"
+    apple:
+      title: Mua Tao
+      material: APPLE
+      amount: 1
+      max-amount: 64
+      price: 25.0
+      slot: 13
+      economy: "vault"
+    cooked-chicken:
+      title: Mua Thit Ga Nuong
+      material: COOKED_CHICKEN
+      amount: 1
+      max-amount: 64
+      price: 48.0
+      slot: 14
+      economy: "vault"
+    cooked-beef:
+      title: Mua Thit Bo Nuong
+      material: COOKED_BEEF
+      amount: 1
+      max-amount: 64
+      price: 35.0
+      slot: 15
+      economy: "vault"
+    golden-carrot:
+      title: Mua Ca Rot Vang
+      material: GOLDEN_CARROT
+      amount: 1
+      max-amount: 64
+      price: 120.0
+      slot: 16
+      economy: "vault"
+    golden-apple:
+      title: Mua Tao Vang
+      material: GOLDEN_APPLE
+      amount: 1
+      max-amount: 64
+      price: 250.0
+      slot: 17
+      economy: "vault"
+
+  # Danh muc nay dung TKShards de mua Key va Spawner (thay cho DonutShards).
+  tkshard:
+    title: SHOP - TKSHARDS
+    material: AMETHYST_SHARD
+    displayName: '&#A303F9TKSHARDS'
+    lore: ['&fNhan de xem shop TKShards']
+    slot: 14
+    common-key:
+      title: Xac Nhan Mua Hang
+      material: TRIPWIRE_HOOK
+      custom-displayname-enabled: true
+      custom-displayname: '&2ᴄᴏᴍᴍᴏɴ ᴋᴇʏ'
+      execute-command: true
+      command: ["crates givekey {player} common {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 200.0
+      slot: 2
+      economy: "tkshards"
+    crimson-key:
+      title: Xac Nhan Mua Hang
+      material: TRIPWIRE_HOOK
+      custom-displayname-enabled: true
+      custom-displayname: '&#C42119ᴄʀɪᴍꜱᴏɴ ᴋᴇʏ'
+      execute-command: true
+      command: ["crates givekey {player} crimson {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 2000.0
+      slot: 5
+      economy: "tkshards"
+    pig-spawner:
+      title: Xac Nhan Mua Hang
+      material: SPAWNER
+      custom-displayname-enabled: true
+      custom-displayname: '&dPig Spawner'
+      execute-command: true
+      command: ["spawner give spawner {player} pig {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 250.0
+      slot: 9
+      economy: "tkshards"
+    cow-spawner:
+      title: Xac Nhan Mua Hang
+      material: SPAWNER
+      custom-displayname-enabled: true
+      custom-displayname: '&dCow Spawner'
+      execute-command: true
+      command: ["spawner give spawner {player} cow {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 350.0
+      slot: 10
+      economy: "tkshards"
+    zombie-spawner:
+      title: Xac Nhan Mua Hang
+      material: SPAWNER
+      custom-displayname-enabled: true
+      custom-displayname: '&dZombie Spawner'
+      execute-command: true
+      command: ["spawner give spawner {player} zombie {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 400.0
+      slot: 11
+      economy: "tkshards"
+    spider-spawner:
+      title: Xac Nhan Mua Hang
+      material: SPAWNER
+      custom-displayname-enabled: true
+      custom-displayname: '&dSpider Spawner'
+      execute-command: true
+      command: ["spawner give spawner {player} spider {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 750.0
+      slot: 12
+      economy: "tkshards"
+    skeleton-spawner:
+      title: Xac Nhan Mua Hang
+      material: SPAWNER
+      custom-displayname-enabled: true
+      custom-displayname: '&dSkeleton Spawner'
+      execute-command: true
+      command: ["spawner give spawner {player} skeleton {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 500.0
+      slot: 13
+      economy: "tkshards"
+    creeper-spawner:
+      title: Xac Nhan Mua Hang
+      material: SPAWNER
+      custom-displayname-enabled: true
+      custom-displayname: '&dCreeper Spawner'
+      execute-command: true
+      command: ["spawner give spawner {player} creeper {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 625.0
+      slot: 14
+      economy: "tkshards"
+    blaze-spawner:
+      title: Xac Nhan Mua Hang
+      material: SPAWNER
+      custom-displayname-enabled: true
+      custom-displayname: '&dBlaze Spawner'
+      execute-command: true
+      command: ["spawner give spawner {player} blaze {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 1000.0
+      slot: 16
+      economy: "tkshards"
+    iron-golem-spawner:
+      title: Xac Nhan Mua Hang
+      material: SPAWNER
+      custom-displayname-enabled: true
+      custom-displayname: '&dIron Golem Spawner'
+      execute-command: true
+      command: ["spawner give spawner {player} iron_golem {amount}"]
+      amount: 1
+      max-amount: 1
+      price: 1500.0
+      slot: 17
+      economy: "tkshards"
+
+  redstone:
+    title: SHOP - REDSTONE
+    material: REDSTONE
+    displayName: '&#00f986REDSTONE'
+    lore: ['&fNhan de xem shop redstone']
+    slot: 15
+    powered-rail:
+      title: Mua Duong Ray Sieu Toc
+      material: POWERED_RAIL
+      amount: 16
+      max-amount: 64
+      price: 200.0
+      slot: 9
+      economy: "vault"
+    glass:
+      title: Mua Kinh
+      material: GLASS
+      amount: 16
+      max-amount: 64
+      price: 100.0
+      slot: 10
+      economy: "vault"
+    smoker:
+      title: Mua Lo Hun Khoi
+      material: SMOKER
+      amount: 1
+      max-amount: 64
+      price: 250.0
+      slot: 11
+      economy: "vault"
+    observer:
+      title: Mua May Theo Doi
+      material: OBSERVER
+      amount: 1
+      max-amount: 64
+      price: 200.0
+      slot: 12
+      economy: "vault"
+    crafter:
+      title: Mua May Crafter
+      material: CRAFTER
+      amount: 1
+      max-amount: 64
+      price: 200.0
+      slot: 13
+      economy: "vault"
+    redstone-dust:
+      title: Mua Bui Redstone
+      material: REDSTONE
+      amount: 16
+      max-amount: 64
+      price: 50.0
+      slot: 14
+      economy: "vault"
+    repeater:
+      title: Mua Bo Lap Redstone
+      material: REPEATER
+      amount: 1
+      max-amount: 64
+      price: 150.0
+      slot: 15
+      economy: "vault"
+    piston:
+      title: Mua Piston
+      material: PISTON
+      amount: 1
+      max-amount: 64
+      price: 250.0
+      slot: 16
+      economy: "vault"
+    hopper:
+      title: Mua Pheu
+      material: HOPPER
+      amount: 1
+      max-amount: 64
+      price: 200.0
+      slot: 17
+      economy: "vault"
+
+  farm:
+    title: SHOP - FARM
+    material: WHEAT
+    displayName: '&#00f986FARM'
+    lore: ['&fNhan de xem shop farm']
+    slot: 16
+    sugar-cane:
+      title: Mua Mia
+      material: SUGAR_CANE
+      amount: 16
+      max-amount: 64
+      price: 67.0
+      slot: 9
+      economy: "vault"
+    bamboo:
+      title: Mua Tre
+      material: BAMBOO
+      amount: 16
+      max-amount: 64
+      price: 100.0
+      slot: 10
+      economy: "vault"
+    mud:
+      title: Mua Bun
+      material: MUD
+      amount: 16
+      max-amount: 64
+      price: 30.0
+      slot: 11
+      economy: "vault"
+    kelp:
+      title: Mua Rong Bien
+      material: KELP
+      amount: 16
+      max-amount: 64
+      price: 100.0
+      slot: 12
+      economy: "vault"
+    ice:
+      title: Mua Bang
+      material: ICE
+      amount: 1
+      max-amount: 64
+      price: 50.0
+      slot: 13
+      economy: "vault"
+    oak-sign:
+      title: Mua Bang Go Soi
+      material: OAK_SIGN
+      amount: 1
+      max-amount: 64
+      price: 15.0
+      slot: 14
+      economy: "vault"

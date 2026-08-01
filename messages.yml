@@ -1,0 +1,20 @@
+# ─────────────────────────────────────────────────────────────────
+#  TkShop — tin nhan (Tieng Viet)
+# ─────────────────────────────────────────────────────────────────
+
+prefix: ""
+
+players-only:    "&cLenh nay chi danh cho nguoi choi."
+no-permission:   "&cBan khong co quyen."
+reload-success:  "&aDa tai lai cau hinh TkShop."
+reload-failed:   "&cTai lai that bai: {error}"
+
+inventory-full:      "&cTui do cua ban da day!"
+not-enough-money:    "&cBan khong du tien de mua vat pham nay!"
+not-enough-shards:   "&cBan khong du {currency} de mua vat pham nay!"
+vault-unavailable:   "&cVault khong kha dung tren server nay."
+shards-unavailable:  "&cTKShards khong kha dung tren server nay."
+
+purchase-success:    "&aBan da mua &f{amount}x {item} &avoi gia &e{price}&a."
+
+shop-empty:          "&cChua co danh muc shop nao. Sua trong plugins/TkShop/shops.yml."

@@ -1,0 +1,21 @@
+name: TkShop
+version: '1.0.0'
+main: com.tkshop.plugin.TkShopPlugin
+api-version: '1.20'
+author: TKShards
+description: Shop GUI rieng - dich tieng Viet, ho tro tra bang Vault (money) hoac TKShards.
+softdepend: [Vault, TKShards]
+
+commands:
+  tkshop:
+    description: Mo shop hoac quan ly TkShop
+    usage: /tkshop [reload]
+    aliases: [shop, tkshopmenu]
+
+permissions:
+  tkshop.use:
+    description: Cho phep mo shop
+    default: true
+  tkshop.admin:
+    description: Cho phep reload cau hinh TkShop
+    default: op

@@ -1,0 +1,14 @@
+# ─────────────────────────────────────────────────────────────────
+#  TkShop — cau hinh chinh
+# ─────────────────────────────────────────────────────────────────
+
+# Dong tien mac dinh khi 1 item khong khai bao "economy".
+# Gia tri hop le: "vault" (tien $ qua Vault) hoac "tkshards" (qua plugin TKShards)
+default-currency: vault
+
+# Khoang cach toi thieu (ms) giua 2 lan click GUI, chong spam/dupe.
+gui-click-cooldown-ms: 150
+
+# Tieu de menu chinh
+main-menu-title: '&8SHOP'
+main-menu-size: 27
